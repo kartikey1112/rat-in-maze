@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const SpeedInput = ({ speed, setSpeed }) => {
+const SpeedInput = ({ speed, setSpeed, isSolved }) => {
   const handleSpeedChange = (e) => {
     setSpeed(Number(e.target.value)); // Update the speed state with the slider's value
   };
@@ -13,6 +13,7 @@ const SpeedInput = ({ speed, setSpeed }) => {
         <input
           type="range"
           className="level"
+          disabled={isSolved}
           min="50"
           max="500"
           step="10"

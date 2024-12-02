@@ -8,14 +8,15 @@ const App = () => {
     Array.from({ length: value }, () => Array(value).fill(1))
   );
   const [isSolving, setIsSolving] = useState(false);
-  const [speed,setSpeed] = useState(300)
+  const [isSolved,setSolved] = useState(false);
+  const [speed,setSpeed] = useState(300);
   const handleMazeSizeChange = (e) => {
     const newSize = parseInt(e.target.value, 10);
     setValue(newSize);
     setMaze(Array.from({ length: newSize }, () => Array(newSize).fill(1)));
   };
 
-  const updateCell = (row, col, newValue) => {
+  const updateCell = (row, col, newValue) => {  
     const updatedMaze = maze.map((r, rowIndex) =>
       r.map((cell, colIndex) =>
         rowIndex === row && colIndex === col ? newValue : cell
@@ -40,10 +41,10 @@ const App = () => {
             onChange={handleMazeSizeChange}
             min="3"
             max="8"
-            disabled={isSolving}
+            disabled={isSolving || isSolved}
           />
         </div>
-        <SpeedInput speed={speed} setSpeed={setSpeed}/>
+        <SpeedInput speed={speed} setSpeed={setSpeed} isSolved={isSolved}/>
         <Maze
           maze={maze}
           updateCell={updateCell}
@@ -53,6 +54,7 @@ const App = () => {
           setMaze={setMaze}
           speed={speed}
           setSpeed={setSpeed}
+          setSolved={setSolved}
         />
       </div>
     </div>
