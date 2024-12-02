@@ -17,19 +17,19 @@ const Maze = ({
   const [solvedPath, setSolvedPath] = useState([]);
   const cancelSolveRef = useRef(false);
 
-  const resetAll =  () => {
-    cancelSolveRef.current = true;
-    setSolvedPath([])
-    setIsSolving(false);
-    setVisited(maze.map((row) => row.map(() => false)));
-    setSolved(false);
-    setRatPosition({ row: 0, col: 0 });
-    const initialSize = 3;
-    setValue(3);
-    setMaze(
-      Array.from({ length: initialSize }, () => Array(initialSize).fill(1))
-    );
-  };
+  // const resetAll =  () => {
+  //   cancelSolveRef.current = true;
+  //   setSolvedPath([])
+  //   setIsSolving(false);
+  //   setVisited(maze.map((row) => row.map(() => false)));
+  //   setSolved(false);
+  //   setRatPosition({ row: 0, col: 0 });
+  //   const initialSize = 3;
+  //   setValue(3);
+  //   setMaze(
+  //     Array.from({ length: initialSize }, () => Array(initialSize).fill(1))
+  //   );
+  // };
 
   const numRows = maze.length;
   const numCols = maze[0]?.length || 0;
