@@ -151,7 +151,7 @@ const Maze = ({
                             cell.row === rowIndex &&
                             cell.col  === colIndex
                         )
-                          ? "bg-green-700"
+                          ? "bg-green-500"
                           : isVisited
                           ? "bg-yellow-300"
                           : cell === 1

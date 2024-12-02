@@ -44,7 +44,7 @@ const App = () => {
             disabled={isSolving || isSolved}
           />
         </div>
-        <SpeedInput speed={speed} setSpeed={setSpeed} isSolved={isSolved}/>
+        <SpeedInput speed={speed} setSpeed={setSpeed} isSolved={isSolved} isSolving={isSolving}/>
         <Maze
           maze={maze}
           updateCell={updateCell}
