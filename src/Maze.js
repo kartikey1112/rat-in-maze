@@ -105,7 +105,7 @@ const Maze = ({
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center px-6">
       <div className="grid grid-cols-1 gap-3">
         {maze.map((row, rowIndex) => (
           <div key={rowIndex} className="flex gap-2">
@@ -134,7 +134,7 @@ const Maze = ({
                     <img
                       src={ratImage}
                       alt="Rat"
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute rat inset-0 w-full object-cover"
                     />
                   ) : rowIndex === maze.length - 1 &&
                     colIndex === maze[0].length - 1 ? (
