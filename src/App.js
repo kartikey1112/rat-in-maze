@@ -94,7 +94,7 @@ const App = () => {
           <div className="flex gap-2 items-center w-9 h-9">
           <img
                       src={githubIcon}
-                      alt="Rat"
+                      alt="github icon"
                       className=" rat w-full object-cover"
                     />
             <a href="https://github.com/kartikey1112/rat-in-maze" className="text-lg text-white font-medium">Github</a>

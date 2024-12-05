@@ -181,6 +181,7 @@ const Maze = ({
           Reset
         </button>
       </div>
+      <span className="text-sm text-white mt-3">Click on the cell to add obstacle</span>
     </div>
   );
 };
