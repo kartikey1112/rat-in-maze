@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Maze from "./Maze";
 import SpeedInput from "./atoms/SpeedInput";
+import githubIcon from "./assets/github.svg"
 
 const App = () => {
   const [value, setValue] = useState(3);
@@ -26,12 +27,12 @@ const App = () => {
 
   return (
     <div
-      className={`App ${value > 6 ? "h-100 " : "h-dvh "}  
-        h-sm-vh 
+      className={`App ${value > 6 ? "h-100 " : "h-dvh " }  
+        h-sm-vh px-5 py-5
       `}
     >
-      <div className="mx-auto w-fit py-14 flex flex-col justify-center items-center gap-5 ">
-        <h1 className="text-5xl text-white font-mono mb-4">Rat in a Maze</h1>
+      <div className="mx-auto w-fit py-6 flex flex-col justify-center items-center gap-5 ">
+        <h1 className="text-5xl text-white font-mono ">Rat in a Maze</h1>
         <div className="flex gap-2">
           <label htmlFor="numberInput" className="text-2xl text-white">
             Enter the size of Maze:
@@ -71,6 +72,35 @@ const App = () => {
           setSpeed={setSpeed}
           setSolved={setSolved}
         />
+      </div>
+      
+      <div className="flex items-end justify-start flex-wrap overflow-hidden">
+        <div className="flex md:flex-col flex-row gap-3 items-start">
+        <div className="flex flex-col gap-3">
+          <div className="flex gap-2 items-center">
+            <div className="w-8 h-8 bg-gray-700 rounded-md"></div>
+            <span className="text-lg text-white font-medium">Obstacle</span>
+          </div>
+          <div className="flex gap-2 items-center">
+            <div className="w-8 h-8 bg-yellow-300 rounded-md"></div>
+            <span className="text-lg text-white font-medium">Visited</span>
+          </div>
+        
+        </div>
+        <div className="flex gap-2 items-center">
+            <div className="w-8 h-8 bg-green-500 rounded-md"></div>
+            <span className="text-lg text-white font-medium">Correct Path</span>
+          </div>
+          <div className="flex gap-2 items-center w-9 h-9">
+          <img
+                      src={githubIcon}
+                      alt="Rat"
+                      className=" rat w-full object-cover"
+                    />
+            <a href="https://github.com/kartikey1112/rat-in-maze" className="text-lg text-white font-medium">Github</a>
+          </div>
+        </div>
+        
       </div>
     </div>
   );

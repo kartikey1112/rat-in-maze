@@ -106,7 +106,7 @@ const Maze = ({
 
   return (
     <div className="flex flex-col justify-center items-center px-6">
-      <div className="grid grid-cols-1 gap-3">
+      <div className="grid grid-cols-1 gap-2">
         {maze.map((row, rowIndex) => (
           <div key={rowIndex} className="flex gap-2">
             {row.map((cell, colIndex) => {
@@ -119,7 +119,7 @@ const Maze = ({
               return (
                 <div
                   key={colIndex}
-                  className="w-12 h-12 block rounded-md relative cursor-pointer"
+                  className="w-8 h-8 block rounded-md relative cursor-pointer"
                   onClick={() => {
                     if (!isSolving && !isTarget) {
                       return updateCell(
