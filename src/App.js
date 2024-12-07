@@ -28,10 +28,10 @@ const App = () => {
   return (
     <div
       className={`App ${value > 6 ? "h-100 " : "h-dvh " }  
-        h-sm-vh px-5 py-5
+        grid h-sm-vh px-5 py-5
       `}
     >
-      <div className="mx-auto w-fit py-6 flex flex-col justify-center items-center gap-5 ">
+      <div className="mx-auto self-end w-fit py-6 flex flex-col justify-center items-center gap-5 ">
         <h1 className="text-5xl text-white font-mono ">Rat in a Maze</h1>
         <div className="flex gap-2">
           <label htmlFor="numberInput" className="text-2xl text-white">
